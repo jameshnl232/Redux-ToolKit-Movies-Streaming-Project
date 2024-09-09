@@ -5,5 +5,5 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["eslintrc.json", "vite.config.ts"]
+  "include": ["vite.config.ts"],
 }
