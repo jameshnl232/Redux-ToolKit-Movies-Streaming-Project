@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import { isMovie, Movie, TvShow } from "../movies/movie.type"
+import type { Movie, TvShow } from "../movies/movie.type";
+import { isMovie } from "../movies/movie.type"
 
 export default function ItemGrid({
   items,

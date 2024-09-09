@@ -1,6 +1,3 @@
-import React, { useEffect, useRef, useState } from "react"
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles
@@ -10,12 +7,10 @@ import "./Slider.module.css"
 import { Autoplay } from "swiper/modules"
 import SwiperCore from "swiper"
 
-import { Movie } from "../movies/movie.type"
+import type { Movie } from "../movies/movie.type"
 import { api_config } from "../../api/api_config"
-import Modal from "../Modal/Modal"
 
-import { getVideos } from "../movies/movies.api"
-import MovieCard  from "../MovieCard/MovieCard"
+import MovieCard from "../MovieCard/MovieCard"
 
 export default function Slider({ movies }: { movies: Movie[] }) {
   SwiperCore.use([Autoplay])
@@ -46,12 +41,12 @@ export default function Slider({ movies }: { movies: Movie[] }) {
               )})`,
             }}
           >
-            {({ isActive }) => <MovieCard movie={movie} active={isActive} isOnSlider={true} />}
+            {({ isActive }) => (
+              <MovieCard movie={movie} active={isActive} isOnSlider={true} />
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
   )
 }
-
-

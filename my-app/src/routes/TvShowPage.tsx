@@ -1,8 +1,9 @@
+import type {
+  LoaderFunctionArgs} from "react-router-dom";
 import {
   Await,
   defer,
   Link,
-  LoaderFunctionArgs,
   useLoaderData,
 } from "react-router-dom"
 import {
@@ -10,7 +11,7 @@ import {
   getDetails,
   getSimilar,
 } from "../features/movies/movies.api"
-import { Cast, TvShow } from "../features/movies/movie.type"
+import type { Cast, TvShow } from "../features/movies/movie.type"
 import { useAppSelector } from "../app/hooks"
 import { selectTheme } from "../features/theme/themeSlice"
 import { api_config } from "../api/api_config"

@@ -1,12 +1,14 @@
+import type {
+  LoaderFunctionArgs} from "react-router-dom";
 import {
   Await,
   defer,
   Link,
-  LoaderFunctionArgs,
   useLoaderData,
 } from "react-router-dom"
 import { useAppDispatch, useAppSelector } from "../app/hooks"
-import { Cast, Movie, TvShow } from "../features/movies/movie.type"
+import type { Cast, Movie} from "../features/movies/movie.type";
+import { TvShow } from "../features/movies/movie.type"
 import { selectTheme } from "../features/theme/themeSlice"
 import {
   getCredits,

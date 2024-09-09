@@ -2,7 +2,7 @@ import { Form, useLoaderData, useNavigate, useSubmit } from "react-router-dom"
 import { useAppSelector } from "../app/hooks"
 import { selectTheme } from "../features/theme/themeSlice"
 import { useCallback, useEffect, useState } from "react"
-import { Movie, TvShow } from "../features/movies/movie.type"
+import type { Movie, TvShow } from "../features/movies/movie.type"
 import { searchList } from "../features/movies/movies.api"
 import ItemGrid from "../features/itemGrid"
 import AnimatedLayout from "../animation/AnimatedLayout"
@@ -44,7 +44,7 @@ export default function SearchPage() {
       setItems([])
     }
     setOnSearch(false)
-  }, [search, type, page])
+  }, [search, type, page, items])
 
   useEffect(() => {
     if (search.trim().length === 0) {
@@ -63,7 +63,7 @@ export default function SearchPage() {
   useEffect(() => {
     const isFirstSearch = search == null
     navigate(`?q=${search}`, { replace: isFirstSearch }) // Update URL with ?q=value
-  }, [search])
+  }, [search, navigate])
 
   const handleLoadMore = () => {
     setPage(page + 1)

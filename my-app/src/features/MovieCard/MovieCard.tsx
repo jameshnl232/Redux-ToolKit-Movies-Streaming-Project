@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { api_config } from "../../api/api_config"
 import Modal from "../Modal"
-import { Cast, isMovie, Movie, TvShow } from "../movies/movie.type"
+import type { Cast, Movie, TvShow } from "../movies/movie.type";
+import { isMovie } from "../movies/movie.type"
 import { getVideos } from "../movies/movies.api"
 
 import { Link } from "react-router-dom"

@@ -1,9 +1,8 @@
 import AnimatedLayout from "../animation/AnimatedLayout"
 import { useAppSelector } from "../app/hooks"
 import ItemGrid from "../features/itemGrid"
-import { Movie, TvShow } from "../features/movies/movie.type"
+import type { Movie, TvShow } from "../features/movies/movie.type"
 import { selectFavorites } from "../features/movies/moviesSlice"
-
 
 export default function FavoritePage() {
   const favorites = useAppSelector(selectFavorites) as (Movie | TvShow)[]

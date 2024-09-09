@@ -1,7 +1,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react"
 import { XMarkIcon } from "@heroicons/react/24/outline"
 import { NavLink } from "react-router-dom"
-import { useAppDispatch } from "../../app/hooks"
+import type { useAppDispatch } from "../../app/hooks"
 import { toggleState } from "../theme/themeSlice"
 
 type NavigationProps = {

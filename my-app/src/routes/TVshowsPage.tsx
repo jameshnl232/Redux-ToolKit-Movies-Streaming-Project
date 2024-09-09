@@ -1,12 +1,8 @@
-import {
-  Await,
-  LoaderFunctionArgs,
-  useLoaderData,
-  useParams,
-} from "react-router-dom"
+import type { LoaderFunctionArgs } from "react-router-dom"
+import { Await, useLoaderData, useParams } from "react-router-dom"
 import ItemGrid from "../features/itemGrid"
-import { getTVList, TVType } from "../features/movies/movies.api"
-import { TvShow } from "../features/movies/movie.type"
+import { getTVList } from "../features/movies/movies.api"
+import type { TvShow } from "../features/movies/movie.type"
 import { useEffect, useState } from "react"
 import Pagination from "../features/pagination"
 import React from "react"

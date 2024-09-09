@@ -1,6 +1,6 @@
-import { PayloadAction } from "@reduxjs/toolkit"
+import type { PayloadAction } from "@reduxjs/toolkit"
 import { createAppSlice } from "../../app/createAppSlice"
-import { Movie, TvShow } from "./movie.type"
+import type { Movie, TvShow } from "./movie.type"
 import {
   getTrendingMovies,
   getTVList,

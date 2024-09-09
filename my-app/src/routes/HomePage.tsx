@@ -9,13 +9,12 @@ import {
 } from "../features/movies/moviesSlice"
 import { fetchTrendingMovies } from "../features/movies/moviesSlice"
 import { useAppDispatch } from "../app/hooks"
-import { Suspense, useEffect } from "react"
+import { useEffect } from "react"
 import MovieList from "../features/MovieList"
 import { getMovieList, getTVList } from "../features/movies/movies.api"
 import { Await, defer, Link, useLoaderData } from "react-router-dom"
-import { Movie, TvShow } from "../features/movies/movie.type"
+import type { Movie, TvShow } from "../features/movies/movie.type"
 import React from "react"
-import { AnimatePresence, motion as m } from "framer-motion"
 import AnimatedLayout from "../animation/AnimatedLayout"
 
 export default function HomePage() {

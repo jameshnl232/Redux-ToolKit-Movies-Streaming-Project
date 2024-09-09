@@ -1,16 +1,16 @@
+import type {
+  LoaderFunctionArgs} from "react-router-dom";
 import {
   Await,
   defer,
-  LoaderFunctionArgs,
   useLoaderData,
 } from "react-router-dom"
 import ItemGrid from "../features/itemGrid"
 import { getMovieList } from "../features/movies/movies.api"
-import { Movie } from "../features/movies/movie.type"
+import type { Movie } from "../features/movies/movie.type"
 import { useState } from "react"
 import Pagination from "../features/pagination"
 import React from "react"
-import { AnimatePresence, motion as m } from "framer-motion"
 import AnimatedLayout from "../animation/AnimatedLayout"
 
 export default function MoviesPage() {

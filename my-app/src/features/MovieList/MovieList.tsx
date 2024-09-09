@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 // Import Swiper styles
 import "swiper/css"
 import "swiper/css/pagination"
-import { isMovie, Movie, TvShow } from "../movies/movie.type"
+import type { Movie, TvShow } from "../movies/movie.type";
+import { isMovie } from "../movies/movie.type"
 import { Link, NavLink } from "react-router-dom"
 
 
